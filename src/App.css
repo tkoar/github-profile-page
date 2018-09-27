@@ -30,8 +30,9 @@
 
 .Profile {
   box-shadow: 0vw 0vw 1vw 0.15vw grey;
-  max-width: 30vw;
+  max-width: 40vw;
   text-align: center;
+  border-radius: 1vw;
 }
 
 .flex {
@@ -72,8 +73,19 @@
   margin-bottom: 2vw
 }
 
+.detail {
+  font-size: 1.5vw;
+  font-family: sans-serif;
+  color: #2F4F4F;
+  margin-left: 1vw;
+  margin-bottom: .2vw;
+}
+
 img {
-  width: 100%;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  width: 80%;
+  border-radius: 50%
 }
 
 .form {
@@ -101,4 +113,20 @@ input[type=text]:hover {
 input[type=submit]:hover {
   border-radius: .5vw;
   background-color: lightblue;
+}
+
+a {
+  border-radius: 2vw;
+  color: #0060B6;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#00A0C6;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+input[type=button] {
+  margin-bottom: 1vw;
 }

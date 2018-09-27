@@ -14,11 +14,12 @@ class Search extends Component {
   submitSearchTerm = (event) => {
     event.preventDefault()
     this.props.updateSearchTerm(this.state.searchTerm)
+    this.setState({searchTerm: ''})
   }
 
   render() {
     return (
-      <div className="Search flex center">
+      <div className="Search">
 
         <form onSubmit={this.submitSearchTerm}>
           <input

@@ -15,22 +15,13 @@ class App extends Component {
     company: '',
     email: '',
     location: '',
+    bio: ""
   }
 
   getFullProfile = () => {
     fetch(`https://api.github.com/users/${this.state.searchTerm}`)
-      .then(r => {
-        if(!r.ok) {
-          alert("Oh no! There was an error proccessing your request. Please make sure the github username is correct.")
-        } else {
-          return r
-        }
-      })
-      .catch(error =>  alert(error))
       .then(resp => resp.json())
-      .then(json => {
-        this.setState({...json})
-      })
+      .then(json => this.setState({...json}))
   }
 
   updateSearchTerm = (term) => this.setState({searchTerm: term}, this.getFullProfile)
