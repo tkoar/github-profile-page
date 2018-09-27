@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
 import Profile from './components/Profile'
 import Search from './components/Search'
+import placeHolder from './unknown-icon.png'
+import './App.css'
 
 class App extends Component {
 
   state = {
-
+    searchTerm: null,
+    avatar_url: placeHolder,
+    repos: [],
+    name: '',
+    login: '',
+    company: '',
+    email: '',
+    location: '',
   }
 
   getFullProfile = () => {
@@ -17,6 +26,7 @@ class App extends Component {
           return r
         }
       })
+      .catch(error =>  alert(error))
       .then(resp => resp.json())
       .then(json => {
         this.setState({...json})
@@ -24,10 +34,6 @@ class App extends Component {
   }
 
   updateSearchTerm = (term) => this.setState({searchTerm: term}, this.getFullProfile)
-
-  componentDidMount() {
-
-  }
 
   render() {
     return (

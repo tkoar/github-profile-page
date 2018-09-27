@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding: 5vw;
 }
 
 .App-logo {
@@ -25,4 +26,79 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.Profile {
+  box-shadow: 0vw 0vw 1vw 0.15vw grey;
+  max-width: 30vw;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  align-items: stretch;
+}
+
+.column {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.center {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.start {
+  align-items: flex-start;
+}
+
+.left-spacing {
+  margin-left: 2vw
+}
+.right-spacing {
+  margin-right: 2vw
+}
+.top-spacing {
+  margin-top: 2vw
+}
+.bottom-spacing {
+  margin-bottom: 2vw
+}
+
+img {
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+}
+
+input[type=text] {
+  border-radius: .5vw;
+  font-size: 1.5vw;
+  margin: 0.5%;
+  min-width: 100%;
+  height: 4vw;
+  box-sizing: border-box;
+  align-self: center;
+  padding: 1vw;
+  border: 0.1vw solid grey;
+  color: black;
+}
+
+input[type=text]:hover {
+  border-radius: .5vw;
+  background-color: lightgrey;
+}
+
+input[type=submit]:hover {
+  border-radius: .5vw;
+  background-color: lightblue;
 }
